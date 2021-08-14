@@ -3,15 +3,15 @@
 class Solution {
     public int[] sortedSquares(int[] A) {
  		int[] result = new int[A.length];
- 		int i = 0, j = A.length - 1;
+ 		int left = 0, right = A.length - 1;
 
  		for (int p = A.length - 1; p >= 0; p--) {
- 			if(Math.abs(A[i]) > Math.abs(A[j])) {
- 				result[p] = A[i] * A[i];
- 				i++;
+ 			if(Math.abs(A[left]) > Math.abs(A[right])) {
+ 				result[p] = A[left] * A[left];
+ 				left++;
  			} else {
- 				result[p] = A[j] * A[j];
- 				j--;
+ 				result[p] = A[right] * A[right];
+ 				right--;
  			}
  		} 
  		return result;
