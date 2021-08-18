@@ -1,0 +1,18 @@
+// 0069 Sqrt(x)
+
+class Solution {
+    public int mySqrt(int x) {
+        if (x == 0) return 0;
+        int start = 1, end = x;
+        while (start < end) { 
+            int mid = start + (end - start) / 2;
+            if (mid <= x / mid && (mid + 1) > x / (mid + 1)) // if found the result
+                return mid; 
+            else if (mid > x / mid)// check the left part
+                end = mid;
+            else
+                start = mid + 1;// check the right part
+        }
+        return start;
+    }
+}
