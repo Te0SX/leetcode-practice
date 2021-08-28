@@ -30,7 +30,7 @@ public boolean isSameTree(TreeNode p, TreeNode q) {
 //     return false;
 // }
 
-// one queue, 100%, faster than 64%
+// one queue, 0ms 100%, faster than 64%
 // public boolean isSameTree(TreeNode p, TreeNode q) {        
 //         Queue<TreeNode> queue = new LinkedList<>();
 //         queue.add(p);
