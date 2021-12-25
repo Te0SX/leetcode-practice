@@ -6,11 +6,11 @@ class Solution(object):
         :rtype: List[int]
         """
         dict = {}
-        for i,n in enumerate(nums):
-            m = target - n
-            if m in d:
-                return [d[m],i]
+        for i,n in enumerate(nums): 
+        # enumrate gives iterator,nums[iterator]
+            if n in dict:
+                return [dict[n],i]
             else:
-                d[n] = i
+                dict[target - n] = i
 
-    
+
